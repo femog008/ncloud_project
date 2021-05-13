@@ -1,3 +1,4 @@
+import socket
 import time
 import redis
 from flask import Flask
@@ -21,7 +22,8 @@ def get_hit_count():
 @app.route('/')
 def hello():
     count = get_hit_count()
-    return "Hit refresh if you think Sunderland are the greatest football team in the world. You've only refreshed {} times. REFRESH MORE!!!\n".format(count)
+    ctrname = socket.gethostname()
+    return "Hit refresh to show the number of times you refreshed the page. You've only refreshed {} times. Request served by {} \n".format(count, ctrname)
 
 
 if __name__ == "__main__":
