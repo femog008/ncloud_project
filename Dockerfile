@@ -1,7 +1,5 @@
 FROM python:alpine
 
-LABEL maintainer='femog008@yahoo.co.uk'
-
 ADD . /code
 
 WORKDIR /code
