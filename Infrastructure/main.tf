@@ -95,10 +95,10 @@ module "eks" {
     },
   ]
 
-  worker_additional_security_group_ids = [aws_security_group.all_worker_mgmt.id]
-  map_roles                            = var.map_roles
-  map_users                            = var.map_users
-  map_accounts                         = var.map_accounts
+  # worker_additional_security_group_ids = [aws_security_group.all_worker_mgmt.id]
+  # map_roles                            = var.map_roles
+  # map_users                            = var.map_users
+  # map_accounts                         = var.map_accounts
 }
 
 
@@ -159,6 +159,10 @@ provider "kubernetes" {
 #   }
 # }
 
+
+
+
+# Example pod to test EKS deployment
 resource "kubernetes_deployment" "example" {
   metadata {
     name = "terraform-example"
@@ -204,6 +208,7 @@ resource "kubernetes_deployment" "example" {
   }
 }
 
+# Example Service to test EKS deployment
 resource "kubernetes_service" "example" {
   metadata {
     name = "terraform-example"

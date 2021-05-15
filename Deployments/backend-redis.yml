@@ -19,13 +19,6 @@ metadata:
   name: redis
 automountServiceAccountToken: true
 ---
-apiVersion: consul.hashicorp.com/v1alpha1
-kind: ServiceDefaults
-metadata:
-  name: "redis"
-spec:
-  protocol: "tcp"
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
