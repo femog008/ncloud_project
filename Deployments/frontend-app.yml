@@ -49,6 +49,6 @@ spec:
       serviceAccountName: frontend
       containers:
         - name: frontend
-          image: ncloud-frontend
+          image: femog008/ncloud-webapp-frontend:v1
           ports:
             - containerPort: 5000

@@ -1,0 +1,21 @@
+global:
+  datacenter: dc1
+  image: hashicorp/consul:1.9.4
+  metrics:
+    enabled: true
+    enableAgentMetrics: true
+  image: "consul:latest"
+# Expose the Consul UI through this LoadBalancer
+ui:
+  service:
+    type: "LoadBalancer"
+# Allow Consul to inject the Connect proxy into Kubernetes containers
+connectInject:
+  enabled: true
+# Configure a Consul client on Kubernetes nodes. GRPC listener is required for Connect.
+client:
+  enabled: true
+  grpc: true
+# Sync Kubernetes and Consul services
+syncCatalog:
+  enabled: true
