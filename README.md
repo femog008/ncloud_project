@@ -11,7 +11,7 @@ This repository contains the necesary scripts and procdedures to deploy a **simp
 - [Infrastructure](#aws-infrastructure)
 - [Docker Compose](#docker-compose)
 - [Configuring AWS Environment](#configuring-aws-environment)
-- [Installation, Configuration and Deploment](#installation,-configuration-and-deploment)
+- [Installation, Configuration and Deploment](#installation-configuration-and-deploment)
 - [Issues](#issues)
 
 ## Enviroment
