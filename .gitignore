@@ -136,4 +136,4 @@ dmypy.json
 *.tfstate.*
 
 # variables files containing secrets
-variables.tfstate
+# variables.tfstate
