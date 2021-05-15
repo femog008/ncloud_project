@@ -13,6 +13,19 @@ spec:
   selector:
     app: frontend
 ---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: frontend
+automountServiceAccountToken: true
+---
+apiVersion: consul.hashicorp.com/v1alpha1
+kind: ServiceDefaults
+metadata:
+  name: frontend
+spec:
+  protocol: "http"
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -34,11 +47,8 @@ spec:
         consul.hashicorp.com/enable-metrics-merging: "false"
     spec:
       serviceAccountName: frontend
-      volumes:
-      - name: config
       containers:
         - name: frontend
           image: ncloud-frontend
-          imagePullPolicy: Never
           ports:
             - containerPort: 5000

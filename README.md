@@ -1,1 +1,2 @@
-# sei_project
+# ncloud_project
+Documentation in progress...
